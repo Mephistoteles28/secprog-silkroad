@@ -11,6 +11,9 @@ password : **user123**
 
 ### Notes
 
+For admin page you must go manually to
+localhost/secprog-silkroad/admin
+
 Still in progress,
 
 - (-) Login for Admin Page

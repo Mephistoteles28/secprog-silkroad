@@ -5,10 +5,10 @@ This web called Silk Road, the idea is to make a drugs store online.
 
 ## How to setup
 
-1. download this directory by 'git clone https://github.com/Mephistoteles28/secprog-silkroad.git'
-2. Import the `silkroad.sql' to your database, such as phpmyadmin
-3. Copy this file to the server, in xampp copy this file to `xampp/htdocs/
-4. Go to the web app with type 'localhost/secprog-silkroad'
+1. download this directory by `git clone https://github.com/Mephistoteles28/secprog-silkroad.git`
+2. Import the `silkroad.sql` to your database, such as phpmyadmin
+3. Copy this file to the server, in xampp copy this file to `xampp/htdocs/`
+4. Go to the web app with type `localhost/secprog-silkroad`
 
 ## Credential
 

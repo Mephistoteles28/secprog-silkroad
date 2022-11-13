@@ -10,7 +10,6 @@ require 'function.php';
 
 $id = $_GET["id"];
 $product = query("SELECT * FROM products WHERE id='$id'")[0];
-var_dump($product);
 
 if (isset($_POST["submit"])){
 

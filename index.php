@@ -11,14 +11,9 @@ if(!$products){
     echo "<br>";
     echo mysqli_error($conn);
     echo "<br>";
-}else{
-    var_dump($products);
 }
 
-foreach($products as $product){
-    echo $product["product_name"];
-    echo "<br>";
-}
+
 ?>
 
 <!DOCTYPE html>

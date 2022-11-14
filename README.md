@@ -32,7 +32,6 @@ For admin page you must go manually to
 
 Still in progress,
 
-- (-) Login for Admin Page
 - (-) Contact us
 - (-) Display product on user page
 - (-) Footer for user page

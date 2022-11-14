@@ -1,8 +1,8 @@
 <?php
 session_start();
 // Cek apakah belum login, kalau belum maka akan dilempar ke login page
-if (!isset($_SESSION["login"])){
-    header("Location: login.php");
+if (!isset($_SESSION["login-admin"])){
+    header("Location: login-admin.php");
 }
 
 // Update data

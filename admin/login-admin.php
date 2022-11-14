@@ -1,14 +1,13 @@
 <?php
 session_start();
-require 'inc/function.php';
-
+require 'function.php';
 // Cek ada cookie nya atau ngga
 if (isset($_COOKIE['id']) && isset($_COOKIE['username'])){
     $id = $_COOKIE['id'];
     $username = $_COOKIE['username'];
 
     // Bandingkan id dan username dengan yang ada di database
-    $query = mysqli_query($conn, "SELECT * FROM user WHERE id='$id'");
+    $query = mysqli_query($conn, "SELECT * FROM admin WHERE id='$id'");
 
     // Kalau ada hasil dari $query
     if (mysqli_num_rows($query)){
@@ -16,10 +15,10 @@ if (isset($_COOKIE['id']) && isset($_COOKIE['username'])){
         // var_dump($row); die;
         // Cek apakah hasil hash dari username cookie dan database sama.
         if ($username === hash("SHA256", $row["username"])){
-            $_SESSION['login'] = true;
+            $_SESSION['login-admin'] = true;
         }
     }else{
-        $_SESSION['login'] = false;
+        $_SESSION['login-admin'] = false;
     }
     
 }
@@ -27,7 +26,7 @@ if (isset($_COOKIE['id']) && isset($_COOKIE['username'])){
 
 
 // Cek apakah sudah punya session atau belum
-if (isset($_SESSION["login"])){
+if (isset($_SESSION["login-admin"])){
     header("Location: index.php");
     exit;
 }
@@ -38,11 +37,12 @@ if(isset($_POST["login"])){
     $password = $_POST["password"];
 
     // Check username ada di database atau ngga
-    $check_username = mysqli_query($conn, "SELECT * FROM user WHERE username = '$username';");
+    $check_username = mysqli_query($conn, "SELECT * FROM admin WHERE username = '$username';");
 
     // Cek ada apa ngga username nya
     if (mysqli_num_rows($check_username)){
         $row = mysqli_fetch_assoc($check_username);
+        // var_dump($row);
         // Kalau ada, cek password nya
         if (password_verify($password, $row["password"])){
             
@@ -56,7 +56,7 @@ if(isset($_POST["login"])){
             }
 
             header("Location: index.php");
-            $_SESSION["login"] = true;
+            $_SESSION["login-admin"] = true;
             exit;
         }
     }else{
@@ -81,7 +81,7 @@ if(isset($_POST["login"])){
     <!-- Navbar -->
     <nav>
         <div class="left-nav">
-            <img src="img/SilkRoad-logo.png" alt="logo" width="100px">
+            <img src="../img/SilkRoad-logo.png" alt="logo" width="100px">
         </div>
         <div class="right-nav-login">
             <h2>Login Page</h2>
@@ -103,7 +103,5 @@ if(isset($_POST["login"])){
             <button type="submit" name="login">Login!</button>
         </form>
     </div>
-
-    <p id="login-text">Dont have an account yet? <a href="register.php"> Register here!</a> </p>
 
 </body>

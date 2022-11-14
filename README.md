@@ -13,8 +13,17 @@ This web called Silk Road, the idea is to make a drugs store online.
 ## Credential
 
 For user,
-username : **user**
-password : **user123**
+
+- username : **user**
+- password : **user123**
+
+For admin,
+
+- username : **admin**
+- password : **admin123**
+
+- username : **admin2**
+- password : **admin321**
 
 ### Notes
 

@@ -1,8 +1,8 @@
 <?php
 session_start();
 // Cek apakah belum login, kalau belum maka akan dilempar ke login page
-if (!isset($_SESSION["login"])){
-    header("Location: admin-login.php");
+if (!isset($_SESSION["login-admin"])){
+    header("Location: login-admin.php");
 }
 
 require 'function.php';
@@ -74,6 +74,9 @@ if(isset($_POST["find"])){
         <?php $i++; ?>
         <?php endforeach ?>
     </table>
+
+    <a href="logout.php"> Logout as Admin </a>
+
 </body>
 
 </html>

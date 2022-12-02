@@ -53,7 +53,7 @@ if(!$products){
                 <p><?=$product["product_description"]?></p>
             </div>
             <div id="item-detail">
-                <a href="#">More detail</a>
+                <a href="https://go.drugbank.com/unearth/q?searcher=drugs&query=<?=$product["product_name"]?>" alt="<?=$product["product_img"]?>">more details</a>
             </div>
         </div>
         <?php endforeach ?>

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Home</title>
+    <title>contact-us</title>
 </head>
 
 <body>
@@ -18,6 +18,6 @@
             <a href="contact-us.php" id="navbar-item"> Contact Us </a>
         </div>
         <div class="right nav">
-            <a href="about-me.php"><img src="img/user-icon.png" alt="user-icon" width="50px"></a>
+            <a href="about-me.php"><img src="img/img_user/user-icon.png" alt="user-icon" width="50px"></a>
         </div>
     </nav>

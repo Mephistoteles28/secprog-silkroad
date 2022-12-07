@@ -70,7 +70,7 @@ if (isset($_POST["submit"])){
             </li>
             <br>
             <li>
-                <img src="../img/<?=$product["product_img"] ?>" alt="<?=$product["product_img"] ?>" width="250px">
+                <img src="../img/img_drug/<?=$product["product_img"] ?>" alt="<?=$product["product_img"] ?>" width="250px">
                 <br>
                 <label for="image">Image : </label>
                 <input type="file" name="image" id="image" value="<?=$product["product_img"] ?>">

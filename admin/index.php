@@ -67,7 +67,7 @@ if(isset($_POST["find"])){
             <td><?= $product["product_price"] ?></td>
             <td><?= $product["product_quantity"] ?></td>
             <td><?= $product["product_description"] ?></td>
-            <td><img src="../img/<?= $product["product_img"] ?>" alt="<?= $product["product_img"] ?>"
+            <td><img src="../img/img_drug/<?= $product["product_img"] ?>" alt="<?= $product["product_img"] ?>"
                     style="width:100px">
             </td>
         </tr>

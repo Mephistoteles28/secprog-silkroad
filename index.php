@@ -24,7 +24,7 @@ if(!$products){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
-    <title>Home</title>
+    <title>Homepage</title>
 </head>
 
 <body>
@@ -36,7 +36,7 @@ if(!$products){
             <a href="contact-us.php" id="navbar-item"> Contact Us </a>
         </div>
         <div class="right nav">
-            <a href="about-me"><img src="img/user-icon.png" alt="user-icon" width="50px"></a>
+            <a href="about-me.php"><img src="img/img_user/user-icon.png" alt="user-icon" width="50px"></a>
         </div>
     </nav>
 
@@ -44,7 +44,7 @@ if(!$products){
     <div class="content">
         <?php foreach($products as $product): ?>
         <div class="content-item">
-            <img src="img/<?=$product["product_img"]?>" alt="<?=$product["product_img"]?>" id="item-image">
+            <img src="img/img_drug/<?=$product["product_img"]?>" alt="<?=$product["product_img"]?>" id="item-image">
             <div>
                 <h3><?=$product["product_name"]?></h3>
             </div>
@@ -53,7 +53,7 @@ if(!$products){
                 <p><?=$product["product_description"]?></p>
             </div>
             <div id="item-detail">
-                <a href="#">More detail</a>
+                <a href="https://go.drugbank.com/unearth/q?searcher=drugs&query=<?=$product["product_name"]?>" alt="<?=$product["product_img"]?>">more details</a>
             </div>
         </div>
         <?php endforeach ?>

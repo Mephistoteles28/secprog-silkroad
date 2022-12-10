@@ -102,7 +102,7 @@ function upload(){
 
     // lolos pengecekan, dipindahin dari tmp ke file yang di inginkan
     $uniqueid = strtolower(uniqid().$namaFile);
-    move_uploaded_file($tmpFile, '../img/'.$uniqueid);
+    move_uploaded_file($tmpFile, '../img/img_drug/'.$uniqueid);
 
     return $uniqueid;
 }
